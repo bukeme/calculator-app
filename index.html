@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html data-theme='1'>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Calculator App</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+	<main>
+
+		<!-- Calculator Top Section -->
+		<section class="calc-top">
+			<p class="calc-title">calc</p>
+			<p class="calc-theme-label">THEME</p>
+			<div class="theme-switch-container">
+				<div class="theme-switch-lable">
+					<span class="theme-switch-lable_1">1</span>
+					<span class="theme-switch-lable_2">2</span>
+					<span class="theme-switch-lable_3">3</span>
+				</div>
+				<div class="theme-switch">
+					<div class="theme-switch-section section-1" data-pl='0' data-theme='1'></div>
+					<div class="theme-switch-section section-2" data-pl='20' data-theme='2'></div>
+					<div class="theme-switch-section section-3" data-pl='40' data-theme='3'></div>
+					<div class="theme-switch-icon"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Calculator Screen Section -->
+		<textarea placeholder="0" rows="1" class="calc-screen"></textarea>
+
+		<!-- Calculator Keys Section -->
+		<section class="calc-keys-container">
+			<div class="calc-keys" data-key='7'><p>7</p></div>
+			<div class="calc-keys" data-key='8'><p>8</p></div>
+			<div class="calc-keys" data-key='9'><p>9</p></div>
+			<div class="calc-keys del" data-key='del'><p>DEL</p></div>
+
+			<div class="calc-keys" data-key='4'><p>4</p></div>
+			<div class="calc-keys" data-key='5'><p>5</p></div>
+			<div class="calc-keys" data-key='6'><p>6</p></div>
+			<div class="calc-keys" data-key='+'><p>+</p></div>
+
+			<div class="calc-keys" data-key='1'><p>1</p></div>
+			<div class="calc-keys" data-key='2'><p>2</p></div>
+			<div class="calc-keys" data-key='3'><p>3</p></div>
+			<div class="calc-keys" data-key='-'><p>-</p></div>
+
+			<div class="calc-keys" data-key='.'><p>.</p></div>
+			<div class="calc-keys" data-key='0'><p>0</p></div>
+			<div class="calc-keys" data-key='/'><p>/</p></div>
+			<div class="calc-keys" data-key='*'><p>x</p></div>
+
+			<div class="calc-keys reset" data-key='reset'><p>RESET</p></div>
+			<div class="calc-keys equals" data-key='='><p>=</p></div>
+		</section>
+	</main>
+
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>

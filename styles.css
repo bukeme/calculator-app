@@ -1,0 +1,240 @@
+/* All Elements Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* Custom Property For Theme 1 */
+
+html[data-theme='1'] {
+	--main-background: hsl(222, 26%, 31%);
+	--keypad-background: hsl(223, 31%, 20%);
+	--screen-background: hsl(224, 36%, 15%);
+	/* Keys */
+	--key-background-1: hsl(225, 21%, 49%);
+	--key-shadow-1: hsl(224, 28%, 35%);
+	--key-background-1-hover: hsl(225, 21%, 69%);
+	--key-background-2: hsl(6, 63%, 50%);
+	--key-shadow-2: hsl(6, 70%, 34%);
+	--key-background-2-hover: hsl(6, 63%, 65%);
+	--key-background-3: hsl(30, 25%, 89%);
+	--key-shadow-3: hsl(28, 16%, 65%);
+	--key-background-3-hover: hsl(30, 25%, 99%);
+	/* Text */
+	--text-color-1: hsl(221, 14%, 31%);
+	--text-color-2: hsl(0, 0%, 100%);
+	--top-text-color: hsl(0, 0%, 100%);
+	--white: hsl(0, 0%, 100%);
+}
+
+/* Custom Property For Theme 2 */
+
+html[data-theme='2'] {
+	--main-background: hsl(0, 0%, 90%);
+	--keypad-background: hsl(0, 5%, 81%);
+	--screen-background: hsl(0, 0%, 93%);
+	/* Keys */
+	--key-background-1: hsl(185, 42%, 37%);
+	--key-shadow-1: hsl(185, 58%, 25%);
+	--key-background-1-hover: hsl(185, 42%, 57%);
+	--key-background-2: hsl(25, 98%, 40%);
+	--key-shadow-2: hsl(25, 99%, 27%);
+	--key-background-2-hover: hsl(25, 98%, 60%);
+	--key-background-3: hsl(45, 7%, 89%);
+	--key-shadow-3: hsl(35, 11%, 61%);
+	--key-background-3-hover: hsl(45, 7%, 99%);
+	/* Text */
+	--text-color-1: hsl(221, 14%, 31%);
+	--text-color-2: hsl(0, 0%, 100%);
+	--top-text-color: hsl(221, 14%, 31%);
+	--white: hsl(0, 0%, 100%);
+}
+
+/* Custom Property For Theme 3 */
+
+html[data-theme='3'] {
+	--main-background: hsl(268, 75%, 9%);
+	--keypad-background: hsl(268, 71%, 12%);
+	--screen-background: hsl(268, 71%, 12%);
+	/* Keys */
+	--key-background-1: hsl(281, 89%, 26%);
+	--key-shadow-1: hsl(285, 91%, 52%);
+	--key-background-1-hover: hsl(281, 89%, 46%);
+	--key-background-2: hsl(176, 100%, 44%);
+	--key-shadow-2: hsl(177, 92%, 70%);
+	--key-background-2-hover: hsl(176, 100%, 64%);
+	--key-background-3: hsl(268, 47%, 21%);
+	--key-shadow-3: hsl(290, 70%, 36%);
+	--key-background-3-hover: hsl(268, 47%, 61%);
+	/* Text */
+	--text-color-1: hsl(52, 100%, 62%);
+	--text-color-2: hsl(198, 20%, 13%);
+	--top-text-color: hsl(52, 100%, 62%);
+	--white: hsl(0, 0%, 100%);
+}
+
+body {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: var(--main-background);
+	transition: background-color 0.3s ease-in-out;
+	padding: 30px;
+}
+
+main {
+	flex: 0 1 500px;
+/*	background-color: grey;*/
+}
+
+/* Calculator Top Styles */
+
+.calc-top {
+	display: flex;
+	align-items: flex-end;
+}
+
+.calc-title {
+	color: var(--top-text-color);
+	font-size: 25px;
+	font-weight: 600;
+	margin-right: auto;
+}
+
+.calc-theme-label {
+	font-size: 12px;
+	color: var(--top-text-color);
+	margin-right: 20px;
+}
+
+.theme-switch-lable {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	color: var(--top-text-color);
+	font-size: 12px;
+}
+
+.theme-switch {
+	width: 60px;
+	height: 16px;
+	border-radius: 8px;
+	background-color: var(--keypad-background);
+	display: flex;
+	align-items: stretch;
+	position: relative;
+	cursor: pointer;
+}
+
+.theme-switch-section {
+	flex: 1 1 20px;
+}
+
+.theme-switch-icon {
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transform: translate(3px, 2px);
+	width: 14px;
+	height: 12px;
+	background-color: var(--key-background-2);
+	border-radius: 8px;
+}
+
+/* Calculator Screen Styles */
+
+.calc-screen {
+	margin: 20px 0;
+	background-color: var(--screen-background);
+	border-radius: 8px;
+	padding: 30px;
+	/*display: flex;
+	justify-content: flex-end;*/
+	color: var(--top-text-color);
+	font-size: 30px;
+	font-weight: 600;
+	width: 100%;
+	border: none;
+	outline: none;
+	resize: none;
+	text-align: right;
+}
+
+textarea::placeholder {
+	color: var(--top-text-color);
+}
+
+/* Calculator Keys Styles */
+
+.calc-keys-container {
+	padding: 20px;
+	background-color: var(--keypad-background);
+	border-radius: 8px;
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 40px);
+	grid-gap: 20px;
+}
+
+.calc-keys {
+	background-color: var(--key-background-3);
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	box-shadow: 1.95px 1.95px 2.6px var(--key-shadow-3);
+	transition: background-color 0.25s ease-in-out;
+	z-index: 1;
+}
+
+.calc-keys:hover,
+.calc-keys:active {
+	background-color: var(--key-background-3-hover);
+}
+
+.calc-keys.del,
+.calc-keys.reset {
+	background-color: var(--key-background-1);
+	box-shadow: 1.95px 1.95px 2.6px var(--key-shadow-1);
+}
+
+.calc-keys.del:hover,
+.calc-keys.del:active,
+.calc-keys.reset:hover,
+.calc-keys.reset:active {
+	background-color: var(--key-background-1-hover);
+}
+
+.calc-keys.equals {
+	background-color: var(--key-background-2);
+	box-shadow: 1.95px 1.95px 2.6px var(--key-shadow-2);
+	grid-column: 3 / span 2;
+}
+
+.calc-keys.equals:hover,
+.calc-keys.equals:active {
+	background-color: var(--key-background-2-hover);
+}
+
+.calc-keys.reset {
+	grid-column: 1 / span 2;
+}
+
+.calc-keys p {
+	font-size: 20px;
+	font-weight: 900;
+	color: var(--text-color-1);
+	z-index: -1;
+}
+
+.calc-keys.del p,
+.calc-keys.reset p {
+	color: var(--white);
+}
+
+.calc-keys.equals p {
+	color: var(--text-color-2);
+}
